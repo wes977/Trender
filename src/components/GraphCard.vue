@@ -1,11 +1,18 @@
 <template>
   <v-container fluid>
-  <highcharts  :options="options" ref="highcharts"></highcharts >
+    <highcharts  :options="options" ref="highcharts"></highcharts >
   </v-container>
 </template>
 
 
 <script>
+/*
+* Graph Card
+* This component is for the Google trends homepage and all
+* basically just display these cards on the home screen with cool
+* VS Topics like oranges vs Apples.
+* all this will be fed from web sockets
+*/
 import {Chart} from 'highcharts-vue'
 var options = {
   title: {
