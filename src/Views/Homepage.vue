@@ -1,15 +1,9 @@
 <template>
   <v-container fluid>
-    <v-card>
-        This is the Google trends home page.
-    </v-card>
-    <v-card> 
-
-        <GraphCard>
-        </GraphCard>
-        <GraphCard>
-        </GraphCard>
-        </v-card>
+    <GraphCard :DataID="1">
+    </GraphCard>
+    <GraphCard :DataID="2">
+    </GraphCard>
   </v-container>
 </template>
 
