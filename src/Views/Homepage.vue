@@ -1,15 +1,24 @@
 <template>
-  <v-container fluid>
+
+        <v-card>
+          <v-container fluid grid-list-md >
+            <v-layout row wrap>
+              <v-flex>
     <GraphCard :DataID="1">
     </GraphCard>
-    <GraphCard :DataID="2">
+        <GraphCard :DataID="2">
     </GraphCard>
-  </v-container>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-card>
+
 </template>
 
 
 <script>
-/*
+ /* eslint-disable */
+ /*
 * Google trends homepage
 * This is the landing page for google trends and all that
 * you will have mutliple fun graphs to take up white space
@@ -19,15 +28,16 @@
 * -> Settings
 * -> Credits
 */
-import GraphCard from '@/components/GraphCard'
+import GraphCard from "@/components/GraphCard";
 export default {
-  components: {GraphCard},
-  name: 'Homepage'
-}
+  components: { GraphCard },
+  name: "Homepage"
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {

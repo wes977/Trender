@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!--
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -24,6 +25,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+    -->
     <v-toolbar
       app
       :clipped-left="clipped"
