@@ -15,7 +15,9 @@ import {
   VIcon,
   VGrid,
   VToolbar,
-  transitions
+  transitions,
+  VCard,
+  VResponsive
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 
@@ -29,6 +31,8 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VToolbar,
+    VCard,
+    VResponsive,
     transitions
   },
   theme: {
@@ -48,6 +52,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App, HighChartsVue },
+  components: { App, HighChartsVue, Vuetify },
   template: '<App/>'
 })

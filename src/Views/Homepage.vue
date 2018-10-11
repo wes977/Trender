@@ -1,18 +1,24 @@
 <template>
 
-        <v-card>
-          <v-container fluid grid-list-md >
-            <v-layout row wrap>
-              <v-flex>
-    <GraphCard :DataID="1">
-    </GraphCard>
-        <GraphCard :DataID="2">
-    </GraphCard>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-card>
-
+    <v-container fluid grid-list-md >
+      <v-layout column justify-space-between >
+        <v-flex>
+          <v-layout row wrap align-content-start>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+              <GraphCard :DataID="1"></GraphCard>
+            
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-container>
 </template>
 
 

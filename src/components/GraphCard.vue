@@ -1,23 +1,18 @@
 <template>
-
-
-        <v-card>
-<highcharts  :options='this.option' ref='highcharts'></highcharts >
-  
-          <v-card-title primary-title>
+<v-flex xs12 sm6 md4 lg3 >
+        <v-card :dark="true" :hover="true" tile flat >
+            <v-card-title primary-title>
             <div>
               <h3 class='headline mb-0'>{{ this.option.title.text }}</h3>
-              <div>{{this.option.series[0].name}} VS {{this.option.series[1].name}}</div>
             </div>
           </v-card-title>
-  
-          <v-card-actions>
-            <v-btn flat color='orange'>Share</v-btn>
-            <v-btn flat color='orange'>Explore</v-btn>
-          </v-card-actions>
+<highcharts :options='this.option' ref='highcharts'></highcharts>
+          <v-card-text>
+            
+            <div><span v-bind:style="{ color: this.option.series[0].color }"> {{this.option.series[0].name}} </span> VS <span v-bind:style="{ color: this.option.series[1].color }" >{{this.option.series[1].name}}</span></div>
+          </v-card-text>
         </v-card>
-
-
+        </v-flex>
 </template>
 
 
@@ -31,12 +26,19 @@
 * all this will be fed from web sockets
 */
 import { Chart } from "highcharts-vue";
+import {Vuetify} from "Vuetify";
 var options = {
   title: {
-    text: "Monthly Average Temperature",
+       style: {
+        display: 'none'
+    },
+    text: "Monthlyd Average Temperature",
     x: -20
   },
   subtitle: {
+       style: {
+        display: 'none'
+    },
     text: "Source: WorldClimate.com",
     x: -20
   },
@@ -59,7 +61,7 @@ var options = {
   yAxis: {
     min: 0,
     max: 100,
-    visible: false,
+    visible: true,
     title: {
       enabled: false,
     },
@@ -72,7 +74,7 @@ var options = {
     ]
   },
   tooltip: {
-    valueSuffix: "°C"
+    valueSuffix: " Trend Score"
   },
   legend: {
     enabled: false,
@@ -84,10 +86,12 @@ var options = {
   series: [
     {
       name: "Tokyo",
+      color: "#d62d20",
       data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
     },
     {
       name: "New York",
+      color: "#ffa700",
       data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
     }
   ]
